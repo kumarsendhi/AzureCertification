@@ -1,0 +1,26 @@
+<NetworkConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/ServiceHosting/2011/07/NetworkConfiguration">
+  <VirtualNetworkConfiguration>
+    <Dns />
+    <VirtualNetworkSites>
+      <VirtualNetworkSite name="seyonvnet" Location="South India">
+        <AddressSpace>
+          <AddressPrefix>10.1.0.0/16</AddressPrefix>
+        </AddressSpace>
+        <Subnets>
+          <Subnet name="Subnet-1">
+            <AddressPrefix>10.1.0.0/19</AddressPrefix>
+          </Subnet>
+          <Subnet name="GatewaySubnet">
+            <AddressPrefix>10.1.32.0/29</AddressPrefix>
+          </Subnet>
+        </Subnets>
+        <Gateway>
+          <VPNClientAddressPool>
+            <AddressPrefix>10.0.0.0/29</AddressPrefix>
+          </VPNClientAddressPool>
+          <ConnectionsToLocalNetwork />
+        </Gateway>
+      </VirtualNetworkSite>
+    </VirtualNetworkSites>
+  </VirtualNetworkConfiguration>
+</NetworkConfiguration>
